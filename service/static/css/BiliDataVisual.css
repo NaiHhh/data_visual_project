@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+	padding: 0;
+}
+.all{
+    background-image: url("../image/background.png");
+    background-size: 100%;
+}
+#main{
+    width: 400px;
+    height: 400px;
+    background-color: #5dc9bc;
+}
+#player{
+    width: 600px;
+    height: 500px;
+    background: red;
+}

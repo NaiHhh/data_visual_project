@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>B站数据可视化</title>
+    <script src="../static/js/layui.js" charset="utf-8"></script>
+    <script src="../static/js/echarts.js"></script>
+    <script src="../static/js/echarts-wordcloud.js"></script>
+    <link rel="stylesheet" href="../static/css/BiliDataVisual.css" type="text/css" />
+</head>
+<body>
+    <div class = "all">
+        <!--词云-->
+        <input type="text" name="cid" required="required" placeholder="视频cid">
+        <input class="but" onclick="wordCloud()" type="submit" value="搜索">
+        <div id="main"></div>
+        <!--当前播放量排行榜-->
+        <div id="player"></div>
+    </div>
+
+    <script src="../static/js/wordCloud.js"></script>
+</body>
+</html>
