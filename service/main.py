@@ -16,9 +16,14 @@ def hello_world():
     return '{"code": 200, "message": "查询成功", "data":' + json.dumps(data) + '}'
 
 
-@app.route('/top100', methods=["GET", "POST"])
-def get_top100():
-    return top100.top100()
+@app.route('/get_play_list', methods=["GET", "POST"])
+def get_play_list():
+    return top100.get_play()
+
+
+@app.route('/get_content_list', methods=["GET", "POST"])
+def get_content_list():
+    return top100.get_content()
 
 
 if __name__ == '__main__':
