@@ -23,7 +23,7 @@ def get_play_list():
 
 @app.route('/get_content_list', methods=["GET", "POST"])
 def get_content_list():
-    return top100.get_content()
+    return '{"code": 200, "message": "查询成功", "data":' + json.dumps(top100.get_content()) + '}'
 
 
 if __name__ == '__main__':

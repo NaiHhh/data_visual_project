@@ -74,3 +74,9 @@ function chuli(jsonlist) {
         mycharts.setOption(option)
     };
 }
+
+window.onload=function (){
+    $('input[name="cid"]').val(88848456);
+    wordCloud(88848456)
+}
+
