@@ -18,7 +18,7 @@ def hello_world():
 
 @app.route('/get_play_list', methods=["GET", "POST"])
 def get_play_list():
-    return top100.get_play()
+    return '{"code": 200, "message": "查询成功", "data":' + json.dumps(top100.get_play()) + '}'
 
 
 @app.route('/get_content_list', methods=["GET", "POST"])
