@@ -1,8 +1,7 @@
 import json
 from flask import Flask, request
-from service import wordCloud
 from flask_cors import CORS
-import top100
+import top100, wordCloud, fans_top
 
 app = Flask(__name__)
 CORS(app, supports_credentials=True)
@@ -24,6 +23,11 @@ def get_play_list():
 @app.route('/get_content_list', methods=["GET", "POST"])
 def get_content_list():
     return '{"code": 200, "message": "查询成功", "data":' + json.dumps(top100.get_content()) + '}'
+
+
+@app.route('/fans_top', methods=["GET", "POST"])
+def get_fans_top():
+    return '{"code": 200, "message": "查询成功", "data":' + json.dumps(fans_top.get_fans_data()) + '}'
 
 
 if __name__ == '__main__':

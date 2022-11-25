@@ -29,7 +29,7 @@ function get_top_100_play(result){
 
   option = {
     title: {
-      text: '播放量排行榜前十',
+      text: '排行榜前十播放量',
       subtext: '',
       left: 'center'
     },
@@ -42,7 +42,7 @@ function get_top_100_play(result){
     },
     series: [
       {
-        name: 'Access From',
+        name: '',
         type: 'pie',
         radius: '50%',
         data: result,
@@ -87,7 +87,7 @@ function get_top_100_content(result){
 
   option = {
     title: {
-      text: '播放量排行榜前十',
+      text: '排行榜前十弹幕量',
       subtext: '',
       left: 'center'
     },
