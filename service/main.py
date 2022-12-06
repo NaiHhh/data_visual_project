@@ -30,5 +30,10 @@ def get_fans_top():
     return '{"code": 200, "message": "查询成功", "data":' + json.dumps(fans_top.get_fans_data()) + '}'
 
 
+@app.route('/anime', methods=["GET", "POST"])
+def get_anime_top():
+    return '{"code": 200, "message": "查询成功", "data":' + json.dumps(fans_top.get_anime_top()) + '}'
+
+
 if __name__ == '__main__':
     app.run()

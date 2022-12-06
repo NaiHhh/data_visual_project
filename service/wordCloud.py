@@ -25,7 +25,7 @@ def spider_page(cid):
     # 将网页编码方式赋值给response.encoding
     resp.encoding = resp.apparent_encoding
 
-    print(resp.text)
+    # print(resp.text)
 
     if resp.status_code == 200:
         # 获取所有评论内容
@@ -36,7 +36,7 @@ def spider_page(cid):
     for item in content_list:
         with open(comment_file_path, 'a', encoding='utf-8') as fin:
             fin.write(item + '\n')
-            print(item)
+            # print(item)
     print('-------------弹幕获取完毕！-------------')
     # 获取处理后的数据
     return data_clear()
@@ -97,14 +97,14 @@ def data_clear():
 
     # 可以打印出来看看统计的词频
 
-    print(word_counts_top100)
+    # print(word_counts_top100)
 
     return list2json(word_counts_top100)
 
 
 def list2json(danmu):
     a = np.array(danmu)
-    print(a)
+    # print(a)
     # 定义list
     # 获取相关列转list
     x1list = a[:, 0]

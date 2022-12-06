@@ -82,7 +82,7 @@ def get_content():
 
 def list2json(danmu):
     a = np.array(danmu)
-    print(a)
+    # print(a)
     # 定义list
     # 获取相关列转list
     x1list = a[:, 0]
