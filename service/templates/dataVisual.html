@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>首页</title>
+        <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+        <link rel="stylesheet" href="../static/css/layui.css">
+    </head>
+    <body class="layui-layout-body">
+        <div class="layui-layout layui-layout-admin">
+          <!--1.头部区域-->
+          <div class="layui-header">
+            <div class="layui-logo">数据可视化作业</div>
+            <!-- 头部区域（可配合layui已有的水平导航） -->
+            <ul class="layui-nav layui-layout-left">
+            </ul>
+            <ul class="layui-nav layui-layout-right">
+            </ul>
+          </div>
+            <!--2.左侧导航-->
+          <div class="layui-side layui-bg-black">
+            <div class="layui-side-scroll">
+              <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+              <ul class="layui-nav layui-nav-tree"  lay-filter="test">
+                <li class="layui-nav-item leftdaohang" data-url="pie.html" mytitle="饼图"><a>饼图</a></li>
+                <li class="layui-nav-item leftdaohang" data-url="wordCloud.html" mytitle="词云"><a>词云</a></li>
+                <li class="layui-nav-item leftdaohang" data-url="other.html" mytitle="折线or柱状图"><a>柱状图</a></li>
+                <li class="layui-nav-item leftdaohang" data-url="China.html" mytitle="地图"><a>地图</a></li>
+              </ul>
+            </div>
+          </div>
+          <!--3.右侧主体内容区-->
+          <div class="layui-body">
+              <!--tabs标签-->
+              <div class="layui-tab layui-tab-card" lay-filter="demo" lay-allowclose="true">
+              <ul class="layui-tab-title">
+              </ul>
+              <div class="layui-tab-content" style="height: 1000px;">
+              </div>
+            </div>
+          </div>
+        </div>
+        <script src="../static/js/layui.js"></script>
+        <script>
+            layui.use('element', function(){
+              var $ = layui.jquery
+              ,element = layui.element; //Tab的切换功能，切换事件监听等，需要依赖element模块
+
+              //触发事件
+              var active = {
+                tabAdd: function(){
+                  //新增一个Tab项
+                  var htmlurl=$(this).attr('data-url');
+                  var mytitle=$(this).attr('mytitle');
+                  var arrayObj = new Array();　//创建一个数组
+                      $(".layui-tab-title").find('li').each(function() {
+                          var y = $(this).attr("lay-id");
+                          arrayObj.push(y);
+                   });
+                    var have=$.inArray(mytitle, arrayObj);  //返回 3,
+                    if (have>=0) {
+                      element.tabChange('demo', mytitle); //切换到当前点击的页面
+                    } else{
+                      element.tabAdd('demo', {
+                        title:mytitle //用于演示
+                        ,content: '<iframe style="width: 100%;height: 20000px;" scrolling="no" src='+htmlurl+' ></iframe>'
+                        ,id: mytitle //实际使用一般是规定好的id，这里以时间戳模拟下
+                      })
+                      element.tabChange('demo', mytitle); //切换到当前点击的页面
+                    }
+                }
+
+              };
+              $(".leftdaohang").click(function(){
+                var type="tabAdd";
+                var othis = $(this);
+                active[type] ? active[type].call(this, othis) : '';
+              });
+
+            });
+        </script>
+    </body>
+</html>

@@ -3,7 +3,7 @@
 	padding: 0;
 }
 .all{
-    background-image: url("../image/background.png");
+    /*background-image: url("../image/background.png");*/
     background-size: 100%;
 }
 #main{

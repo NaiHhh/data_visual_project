@@ -35,5 +35,9 @@ def get_anime_top():
     return '{"code": 200, "message": "查询成功", "data":' + json.dumps(fans_top.get_anime_top()) + '}'
 
 
+@app.route('/weather', methods=["GET", "POST"])
+def get_weather():
+    return '{"code": 200, "message": "查询成功", "data":' + json.dumps(fans_top.get_anime_top()) + '}'
+
 if __name__ == '__main__':
     app.run()

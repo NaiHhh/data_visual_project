@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>词云</title>
+    <script src="../static/js/layui.js" charset="utf-8"></script>
+    <script src="../static/js/echarts.js"></script>
+    <script src="../static/js/echarts-wordcloud.js"></script>
+    <link rel="stylesheet" href="../static/css/BiliDataVisual.css" type="text/css" />
+</head>
+<body>
+    <!--词云-->
+    <input type="text" name="cid" required="required" placeholder="视频cid">
+    <input class="but" onclick="wordCloud()" type="submit" value="搜索">
+    <div id="main"></div>
+    <script src="../static/js/wordCloud.js"></script>
+    <script src="../static/js/top100.js"></script>
+    <script src="../static/js/fans-top.js"></script>
+    <script src="../static/js/BiliDataVisual.js"></script>
+</body>
+</html>
