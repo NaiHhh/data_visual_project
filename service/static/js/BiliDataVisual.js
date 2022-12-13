@@ -6,7 +6,6 @@ function get_anime_top() {
         type: "POST",//方法类型
         contentType: "application/json;charset=utf-8",
         url: "http://127.0.0.1:5000/anime" ,//url
-        // data: '{"cid":"' + cid + '"}',
         success: function (result) {
             result = JSON.parse(result);
             if(result.code===200){

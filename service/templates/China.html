@@ -11,33 +11,30 @@
 </body>
 <script>
 
-function randomData() {
-     return Math.round(Math.random()*500);
-}
   var mydata = [
-                {name: '北京',value: '100' },{name: '天津',value: randomData() },
-                {name: '上海',value: randomData() },{name: '重庆',value: randomData() },
-                {name: '河北',value: randomData() },{name: '河南',value: randomData() },
-                {name: '云南',value: randomData() },{name: '辽宁',value: randomData() },
-                {name: '黑龙江',value: randomData() },{name: '湖南',value: randomData() },
-                {name: '安徽',value: randomData() },{name: '山东',value: randomData() },
-                {name: '新疆',value: randomData() },{name: '江苏',value: randomData() },
-                {name: '浙江',value: randomData() },{name: '江西',value: randomData() },
-                {name: '湖北',value: randomData() },{name: '广西',value: randomData() },
-                {name: '甘肃',value: randomData() },{name: '山西',value: randomData() },
-                {name: '内蒙古',value: randomData() },{name: '陕西',value: randomData() },
-                {name: '吉林',value: randomData() },{name: '福建',value: randomData() },
-                {name: '贵州',value: randomData() },{name: '广东',value: randomData() },
-                {name: '青海',value: randomData() },{name: '西藏',value: randomData() },
-                {name: '四川',value: randomData() },{name: '宁夏',value: randomData() },
-                {name: '海南',value: randomData() },{name: '台湾',value: randomData() },
-                {name: '香港',value: randomData() },{name: '澳门',value: randomData() }
+                {name: '北京',value: '36102.6' },{name: '天津',value: 14083.73 },
+                {name: '上海',value: 38700.58 },{name: '重庆',value: 25002.79 },
+                {name: '河北',value: 36206.9 },{name: '河南',value: 54997.07 },
+                {name: '云南',value: 24500.0 },{name: '辽宁',value: 25115.0 },
+                {name: '黑龙江',value: 13698.5 },{name: '湖南',value: 41781.49 },
+                {name: '安徽',value: 38680.6 },{name: '山东',value: 73129.0 },
+                {name: '新疆',value: 13797.58 },{name: '江苏',value: 102700.0 },
+                {name: '浙江',value: 64613 },{name: '江西',value: 25691.5 },
+                {name: '湖北',value: 43443.46 },{name: '广西',value: 22156.69 },
+                {name: '甘肃',value: 9016.7 },{name: '山西',value: 17651.93 },
+                {name: '内蒙古',value: 17360 },{name: '陕西',value: 26181.86 },
+                {name: '吉林',value: 12311.32 },{name: '福建',value: 43903.89 },
+                {name: '贵州',value: 17826.56 },{name: '广东',value: 110760.94 },
+                {name: '青海',value: 3005.92 },{name: '西藏',value: 1902.74 },
+                {name: '四川',value: 48598.76 },{name: '宁夏',value: 3920.55 },
+                {name: '海南',value: 5532.39 },{name: '台湾',value: 46167.28 },
+                {name: '香港',value: 24103.74 },{name: '澳门',value: 1678.44 }
             ];
 
                 var optionMap = {
                 backgroundColor: '#FFFFFF',
                 title: {
-                    text: '全国地图大数据',
+                    text: '2020年各省GDP',
                     subtext: '',
                     x:'center'
                 },
@@ -51,9 +48,9 @@ function randomData() {
                     x: 'left',
                     y: 'center',
                     splitList: [
-                        {start: 500, end:600},{start: 400, end: 500},
-                        {start: 300, end: 400},{start: 200, end: 300},
-                        {start: 100, end: 200},{start: 0, end: 100},
+                        {start: 100000, end:120000},{start: 80000, end: 100000},
+                        {start: 60000, end: 80000},{start: 40000, end: 60000},
+                        {start: 20000, end: 40000},{start: 0, end: 20000},
                     ],
                     color: ['#5475f5', '#9feaa5', '#85daef','#74e2ca', '#e6ac53', '#9fb5ea']
                 },
